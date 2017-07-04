@@ -1,0 +1,2 @@
+ACCESS_TOKEN = '5679361638.395d4d9.d4e5e05e63904a4099cf293855490f95'
+BASE_URL = 'https://api.instagram.com/v1'
