@@ -14,4 +14,4 @@ def like_a_post(user_name):
 
   else:
       print("Unable to like the POST or Status code other than 200 recieved")
-like_a_post(search_user())
+# like_a_post(search_user())
