@@ -1,10 +1,7 @@
 import requests
 from global_variable import ACCESS_TOKEN,BASE_URL
 def get_location_id():
-  print "To get Longitude and latitude go to: https://maps.google.com"
-  lat = str(raw_input("Please enter a Latitude: "))
-  lng = str(raw_input("Please enter a Longitude: "))
-  url = "%s/locations/search?lat=%s&lng=%s&access_token=%s"%(BASE_URL,lat,lng,ACCESS_TOKEN)
+  url = "%s/locations/search?lat=31.0377824&lng=76.6900991&access_token=%s"%(BASE_URL,ACCESS_TOKEN)
   # print url
   response = requests.get(url).json()
   return response
