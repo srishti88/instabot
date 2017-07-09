@@ -5,3 +5,4 @@ def search_user_info(user_id):
     response = requests.get(url).json()
     print response['data']['username'],response['data']['id']
 
+

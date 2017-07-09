@@ -26,4 +26,4 @@ def get_location_post():
           else:
               # print ("No posts contain: %s") % text_to_search_in_caption
             pass
-get_location_post()
+# get_location_post()

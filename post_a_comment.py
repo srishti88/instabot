@@ -18,4 +18,4 @@ def post_a_comment(user_name):
 
   else:
       print("Status code other than 200 recieved")
-post_a_comment(search_user())
+# post_a_comment(search_user())
