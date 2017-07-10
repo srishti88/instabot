@@ -13,7 +13,7 @@ def menu():
     print("1.To get owner's information")
     print("2.Search a user")
     print("3.To get user's id")
-    print("4.To get user's media")
+    print("4.T qo get user's media")
     print("5.To post a comment")
     print("6.Delete a negative comment")
     print("7.To like a post")
