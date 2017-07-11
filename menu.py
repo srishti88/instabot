@@ -4,23 +4,29 @@ from like_a_post import *
 from post_a_comment import *
 from search_user import *
 from user_media import *
+from natural_calamities import natural_calamities
 from get_location_id import *
 from get_comment_id import *
-user = raw_input("Enter the username for which you want to perform following actions: ")
+import sys
+from termcolor import colored, cprint
+
+
+
+user = raw_input(colored("Enter the username for which you want to perform following actions: ",'red'))
 while len(user) == 0:
-    user = raw_input("Enter the username for which you want to perform following actions: ")
+    user = raw_input(colored("Enter the username for which you want to perform following actions: ",'red'))
 def menu():
-    print("1.To get owner's information")
-    print("2.Search a user")
-    print("3.To get user's id")
-    print("4.T qo get user's media")
-    print("5.To post a comment")
-    print("6.Delete a negative comment")
-    print("7.To like a post")
-    print("8.To get images between certain geographical coordinates")
-    print("9.To exit")
+    print (colored("1","blue")+ colored(".To get owner's information",'magenta'))
+    print (colored("2","blue")+ colored(".Search a user",'magenta'))
+    print (colored("3","blue")+ colored(".To get user's id",'magenta'))
+    print (colored("4","blue")+ colored(".T qo get user's media",'magenta'))
+    print (colored("5","blue")+ colored(".To post a comment",'magenta'))
+    print (colored("6","blue")+ colored(".Delete a negative comment",'magenta'))
+    print (colored("7","blue")+ colored(".To like a post",'magenta'))
+    print (colored("8","blue")+ colored(".To get images between certain geographical coordinates",'magenta'))
+    print (colored("9","white",'on_red')+ colored(".To exit",'white','on_red'))
     def choose_option():
-        user_choice = raw_input("select an option : ")
+        user_choice = raw_input(colored("select an option : ",'red'))
         if len(user_choice) > 0:
             user_choice = int (user_choice)
             if user_choice == 1:
@@ -45,7 +51,7 @@ def menu():
                 like_a_post(search_user(user))
                 menu()
             elif user_choice == 8:
-                get_location_post()
+                natural_calamities()
                 menu()
             elif user_choice == 9:
                 print ("Thank You for using InstaBot")

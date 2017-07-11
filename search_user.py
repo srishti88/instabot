@@ -2,7 +2,6 @@ import requests
 from global_variable import *
 def search_user(user):
     # user_to_be_searched = raw_input("Enter a name to search: ")
-
     url = ('%s/users/search?q=%s&access_token=%s') % (BASE_URL,user,ACCESS_TOKEN)
     response = requests.get(url).json()
     # print response

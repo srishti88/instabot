@@ -11,7 +11,7 @@ calamities = ['earthquake','landslide','volcanic_erruption','flood','tsunami','c
 
 def natural_calamities():
     lattitude,longtiude = raw_input("Enter space separated lattitude and longitude : ").split()
-    request_url=(BASE_URL+'locations/search?lat=%s&lng=%s&access_token=%s' )%(lattitude,longtiude,ACCESS_TOKEN)
+    request_url=(BASE_URL+'/locations/search?lat=%s&lng=%s&access_token=%s' )%(lattitude,longtiude,ACCESS_TOKEN)
     print 'GET %s'%request_url
     location = requests.get(request_url).json()
     if location['meta']['code'] == 200:
@@ -19,7 +19,7 @@ def natural_calamities():
             for x in range(0, len(location['data'])):
                 id = location['data'][x]['id']
                 print id
-                request_url = (BASE_URL + 'locations/%s/media/recent?access_token=%s')%(id,ACCESS_TOKEN)
+                request_url = (BASE_URL + '/locations/%s/media/recent?access_token=%s')%(id,ACCESS_TOKEN)
                 media = requests.get(request_url).json()
                 if media['meta']['code'] == 200:
                     if len(media['data']):
